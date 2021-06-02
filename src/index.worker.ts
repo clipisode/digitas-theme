@@ -9,7 +9,7 @@ export const siteData: SiteData = {
   meta: {
     // values: TOPIC_TITLE
     title: "TOPIC_TITLE • Digitas",
-    description: "Send me a quick video reply for TOPIC_TITLE • You don't need an app.",
+    description: "Send me a quick video reply for TOPIC_TITLE — no app needed.",
   },
   brandColor: "#f47721",
   networkError: "Please check your Internet connection.",
@@ -116,7 +116,7 @@ export const siteData: SiteData = {
     markup: `
       <div class="flex flex-grow flex-col items-center justify-between">
         <div>
-          <p class="mt-12 mb-12 mx-3 text-center">做得好。 您對 <span class="whitespace-nowrap"><b>INVITATION_DISPLAY_NAME</b> 的視頻回复已發送。</span></p>
+          <p class="mt-12 mb-12 mx-3 text-center">做得好。<br/><br/>您對 <span class="whitespace-nowrap"><b>INVITATION_DISPLAY_NAME</b> 的視頻回复已發送。</span></p>
           <div class="items-center flex flex-col space-y-5">
             <a href="https://www.digitas.com/">
               <img src="THEME_FILE_ROOT/unicorn.png" class="animate-pulse animate-bounce" width="200" height="180" />
