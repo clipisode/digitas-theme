@@ -119,7 +119,7 @@ export const siteData: SiteData = {
           <p class="mt-12 mb-12 mx-3 text-center">做得好。<br/><br/>您對 <span class="whitespace-nowrap"><b>INVITATION_DISPLAY_NAME</b> 的視頻回复已發送。</span></p>
           <div class="items-center flex flex-col space-y-5">
             <a href="https://www.digitas.com/">
-              <img src="THEME_FILE_ROOT/unicorn.png" class="animate-pulse animate-bounce" width="200" height="180" />
+              <img src="THEME_FILE_ROOT/unicorn.png" width="200" height="180" />
             </a>
           </div>
         </div>
