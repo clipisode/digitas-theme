@@ -5,21 +5,30 @@ export const getCustomDataDescriptors: GetCustomDataDescriptorsFn = () => {
 };
 
 export const siteData: SiteData = {
-  customCssKey: "styles.css",
+  // customCssKey: "styles.css",
   meta: {
     // values: TOPIC_TITLE
-    title: "TOPIC_TITLE • RushTix",
-    description: "Send a video request (no app needed) for TOPIC_TITLE",
+    title: "TOPIC_TITLE • Digitas",
+    description: "Send me a quick video reply for TOPIC_TITLE • You don't need an app.",
   },
+  brandColor: "#f47721",
+  networkError: "Please check your Internet connection.",
+  unknownError: "Unknown error.",
   introScreen: {
     // values: SOCIAL_NETWORK, BROWSER_NAME, INVITATION_DISPLAY_NAME, EXTRA_TERMS, BRAND_SLUG, TERMS_SLUG, TERMS_NAME, BRAND_NAME
-    recordButtonLabel: "Record a video request",
+    recordButtonLabel: "錄製視頻回复", // Record a video reply
+    readyButtonLabel: "Ready to record",
+    uploadLinkLabel: `<p>或者<span class="text-brand-primary-light underline">上傳視頻</span>。</p>`, // Or upload a video.
     readyDescription: `
       <h1 class="text-center text-black font-heading font-extrabold p-0 text-2xl">Hang on</h1>
       <p class="text-left text-gray-700 text-sm py-3">The SOCIAL_NETWORK browser doesn’t support direct camera uploads on Android.</p>
       <h1 class="text-center text-black font-heading font-extrabold p-0 text-2xl">Good news</h1>
-      <p class="text-left text-gray-700 text-sm py-3">Just tap the three dots menu and choose <span class="whitespace-nowrap">“Open in BROWSER_NAME”</span> to send your request to <span class="whitespace-nowrap">INVITATION_DISPLAY_NAME</span>.</p>
+      <p class="text-left text-gray-700 text-sm py-3">Just tap the three dots menu and choose <span class="whitespace-nowrap">“Open in BROWSER_NAME”</span> to reply to <span class="whitespace-nowrap">INVITATION_DISPLAY_NAME</span>.</p>
     `,
+    termsMarkup: `回复 ，即表示您同意我們的<a href="/terms">條款和條件</a>以及<a href="/privacy">隱私政策</a>EXTRA_TERMS。`,
+    // By replying to INVITATION_DISPLAY_NAME, you agree to our Terms and Privacy.
+    extraTerms: `和<a href="/terms/BRAND_SLUG/TERMS_SLUG">TERMS_NAME</a><span class="whitespace-nowrap">來自 BRAND_NAME</span>`,
+    // plus TERMS_NAME from BRAND_NAME
   },
   introScreenDesktop: {
     // values: THEME_FILE_ROOT, TOPIC_TITLE, QR_CODE, INVITATION_DISPLAY_NAME, INVITATION_URL
@@ -27,41 +36,76 @@ export const siteData: SiteData = {
       <div class="flex flex-col items-center justify-between text-center flex-grow ">
         <div class="flex flex-col items-center justify-between text-center">
           <div class="m-2">
-            <a href="https://rushtix.com">
-              <img src="THEME_FILE_ROOT/icon.png" class="w-12 h-12" />
+            <a href="https://clipisode.com">
+              <img src="/icon.png" class="w-12 h-12" />
             </a>
           </div>
           <h1 class="font-heading mt-3 mb-6 text-xl md:text-2xl max-h-28 md:max-h-32 overflow-hidden">TOPIC_TITLE</h1>
         </div>
         <div class="m-8">QR_CODE</div>
         <div>
-          <p class="m-4 mb-6 text-base">Point your camera at the QR code to open this link on your
-          phone and send <span class="whitespace-nowrap"><b>INVITATION_DISPLAY_NAME</b></span> <span class="whitespace-nowrap">a video request.</span></p>
+          <p class="m-4 mb-6 text-base">將您的相機對準二維碼在您的手機上打開此邀請鏈接並向 <span class="whitespace-nowrap"><b>INVITATION_DISPLAY_NAME</b></span> <span class="whitespace-nowrap">發送視頻回复。</span></p>
+          <h2 class="font-heading mt-3 mb-6 text-2xl hidden">INVITATION_URL</h2>
         </div>
-      </div>
-    `,
+    </div>`,
   },
   nameScreen: {
-    // values: UPLOAD_PERCENTAGE, INVITATION_DISPLAY_NAME, SOCIAL_NETWORK
-    instructions: `Add your name and hit Save to send <span class="whitespace-nowrap"><b>INVITATION_DISPLAY_NAME</b> your shout out request.</span>`,
-    saveButtonLabel: "Save my request",
+    // values: THEME_FILE_ROOT, UPLOAD_PERCENTAGE, INVITATION_DISPLAY_NAME, SOCIAL_NETWORK
+    nameLabel: "名稱",
+    nameValidation: "(必需的)",
+    socialValidation: "(可選的)",
+    socialDescription:
+      "Add your SOCIAL_NETWORK username so you can be tagged in the video.",
+    titleUploading: "上傳進度 UPLOAD_PERCENTAGE%",
+    titleHitSave: "點擊保存按鈕",
+    instructions: `添加您的姓名並單擊保存按鈕將您的視頻回復發送給 <span class="whitespace-nowrap"><b>INVITATION_DISPLAY_NAME</b> 。</span>`,
+    pleaseWait:
+      "請等待您的視頻上傳完成後再離開此頁面。",
+    editButtonLabel: "編輯我的名字",
+    saveButtonLabel: "保存我的視頻回复",
     nameScreenHeader: `
       <div class="my-6 flex flex-col items-center">
         <img src="THEME_FILE_ROOT/icon.png" class="w-16 h-16" />
       </div>
     `,
   },
+  emailScreen: {
+    // values: ???
+    title: "Keep in touch",
+    emailInputPlaceholder: "Email address",
+    buttonLabel: "Add me",
+    buttonSkipLabel: "Skip this",
+  },
   closedScreen: {
     // values: THEME_FILE_ROOT, INVITATION_DISPLAY_NAME
     markup: `
       <div class="flex flex-grow flex-col items-center justify-between">
         <div>
-          <p class="mt-12 mb-12 mx-3 text-center">This invitation is no longer <span class="whitespace-nowrap">accepting shout out requests.</span></p>
-          <div class="m-2">
-            <a href="https://rushtix.com">
-              <img src="THEME_FILE_ROOT/logo.png" style="width: 220px; height: 39px; margin: 0 auto;" />
+          <p class="mt-12 mb-12 mx-3 text-center">This invitation is no longer <span class="whitespace-nowrap">accepting replies.</span></p>
+          <div class="items-center flex flex-col space-y-5">
+            <a href="https://clipisode.com">
+              <img src="/icon.png" width="64" height="64" />
             </a>
-            <p class="mt-12 mb-12 mx-3 text-center">You'll receive your shout out video from <span class="whitespace-nowrap"><b>INVITATION_DISPLAY_NAME</b> via email when <span class="whitespace-nowrap">it's ready.</span></span></p>
+            <a href="https://clipisode.com">
+              <img src="/logo.png" width="220" height="32" />
+            </a>
+          </div>
+          <p class="mt-12 mb-4 mx-3 text-center">Make unforgettable videos<br><u>with</u> your community.</p>
+          <div class="hidden iosOnly text-center">
+              <div><a class="downloadButton" href="https://apps.apple.com/us/app/clipisode-easy-video-collabs/id1475959226#?platform=iphone">Download the app</a></div>
+          </div>
+        </div>
+        <div>
+          <div class="hidden iosOnly">
+            <div class="mb-24">
+              <a href="https://apps.apple.com/us/app/clipisode-easy-video-collabs/id1475959226#?platform=iphone">
+                <img class="h-10 mx-auto" src="/app-store.svg" />
+              </a>
+            </div>
+          </div>
+          <div class="hidden androidOnly mb-16">
+            <p class="bg-yellow-100 text-center text-sm mx-3 mb-4">Clipisode is only available for <span class="whitespace-nowrap">iPhone and iPad</span> right now.</p>
+            <p class="text-center text-sm mx-3 mb-4"><a class="text-blue-500 underline" href="care@clipisode.com">Email us</a> if you want to talk about Clipisode for Android.</p>
           </div>
         </div>
       </div>
@@ -72,15 +116,41 @@ export const siteData: SiteData = {
     markup: `
       <div class="flex flex-grow flex-col items-center justify-between">
         <div>
-          <p class="mt-12 mb-12 mx-3 text-center">Nice work! Your video request for <span class="whitespace-nowrap"><b>INVITATION_DISPLAY_NAME</b> was sent.</span></p>
-          <div class="m-2">
-            <a href="https://rushtix.com">
-              <img src="THEME_FILE_ROOT/logo.png" style="width: 220px; height: 39px; margin: 0 auto;" />
+          <p class="mt-12 mb-12 mx-3 text-center">做得好。 您對 <span class="whitespace-nowrap"><b>INVITATION_DISPLAY_NAME</b> 的視頻回复已發送。</span></p>
+          <div class="items-center flex flex-col space-y-5">
+            <a href="https://www.digitas.com/">
+              <img src="THEME_FILE_ROOT/unicorn.png" class="animate-pulse animate-bounce" width="200" height="180" />
             </a>
-            <p class="mt-12 mb-12 mx-3 text-center">You'll receive your shout out video from <span class="whitespace-nowrap"><b>INVITATION_DISPLAY_NAME</b> via email when <span class="whitespace-nowrap">it's ready.</span></span></p>
           </div>
         </div>
       </div>
+  `,
+  },
+  warningCamera: {
+    // values: HOST_APP, BUTTON_TYPE, BUTTON_ACTION, INVITATION_DISPLAY_NAME
+    description: `
+      <h1 class="text-center text-black font-heading font-extrabold p-0 text-2xl">Camera trouble?</h1>
+      <p class="text-left text-gray-700 text-sm py-3">If you couldn't record a video, it's often because HOST_APP doesn't have camera permission.</p>
+      <h1 class="text-center text-black font-heading font-extrabold p-0 text-2xl">Good news</h1>
+      <p class="text-left text-gray-700 text-sm py-3">If you don't want to give HOST_APP access to your camera, just tap the BUTTON_TYPE and BUTTON_ACTION to send a video to <span class="whitespace-nowrap"></span>INVITATION_DISPLAY_NAME</span>.</p>
     `,
+    dismissButtonLabel: "Close this message",
+  },
+  warningNetwork: {
+    title: "Network error",
+    description: `<p class="mb-4">Please check your connection <span class="whitespace-nowrap">and try again</span>.<p>`,
+    redoButtonLabel: "Try again",
+  },
+  warningSilent: {
+    title: "There is no audio",
+    description: `<p class="mb-4">This often happens when an app doesn't have microphone permission.</p><p class="mb-4">You can change your app settings and try again or simply open this invitation in Chrome or Safari.</p>`,
+    redoButtonLabel: "Record again",
+    continueLinkLabel: `<p><span class="text-brand-primary">Use the silent video</span>.</p>`,
+  },
+  warningWide: {
+    title: "Your video is wide",
+    description: `<p class="mb-4">Tall videos work best because Clipisode combines your video with the host's tall answer video.</p><p class="mb-4"p>We can crop this video and make it tall or you can choose a new video.</p>`,
+    redoButtonLabel: "Choose a new video",
+    continueLinkLabel: `<p><span class="text-brand-primary">Use the wide video</span>.</p>`,
   },
 };

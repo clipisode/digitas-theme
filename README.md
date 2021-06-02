@@ -1,2 +1,2 @@
-# standard-theme
-The standard theme available to everyone by default.
+# digitas-theme
+A test theme for zh-TW reply pages.
