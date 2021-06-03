@@ -16,9 +16,11 @@ export const siteData: SiteData = {
   unknownError: "Unknown error.",
   introScreen: {
     // values: SOCIAL_NETWORK, BROWSER_NAME, INVITATION_DISPLAY_NAME, EXTRA_TERMS, BRAND_SLUG, TERMS_SLUG, TERMS_NAME, BRAND_NAME
-    recordButtonLabel: "錄製視頻回复", // Record a video reply
+    recordButtonLabel: "錄製視頻回复",
+    // Record a video reply
     readyButtonLabel: "Ready to record",
-    uploadLinkLabel: `<p>或者<span class="text-brand-primary-light underline">上傳視頻</span>。</p>`, // Or upload a video.
+    uploadLinkLabel: `<p>或者<span class="text-brand-primary-light underline">上傳視頻</span>。</p>`,
+    // Or upload a video.
     readyDescription: `
       <h1 class="text-center text-black font-heading font-extrabold p-0 text-2xl">Hang on</h1>
       <p class="text-left text-gray-700 text-sm py-3">The SOCIAL_NETWORK browser doesn’t support direct camera uploads on Android.</p>
@@ -52,17 +54,26 @@ export const siteData: SiteData = {
   nameScreen: {
     // values: THEME_FILE_ROOT, UPLOAD_PERCENTAGE, INVITATION_DISPLAY_NAME, SOCIAL_NETWORK
     nameLabel: "名稱",
+    // Name
     nameValidation: "(必需的)",
+    // (required)
     socialValidation: "(可選的)",
+    // (optional)
     socialDescription:
       "Add your SOCIAL_NETWORK username so you can be tagged in the video.",
     titleUploading: "上傳進度 UPLOAD_PERCENTAGE%",
+    // Uploading UPLOAD_PERCENTAGE%
     titleHitSave: "點擊保存按鈕",
+    // Hit save to finish
     instructions: `添加您的姓名並單擊保存按鈕將您的視頻回復發送給 <span class="whitespace-nowrap"><b>INVITATION_DISPLAY_NAME</b> 。</span>`,
+    // Add your name and hit Save to send INVITATION_DISPLAY_NAME your reply.
     pleaseWait:
       "請等待您的視頻上傳完成後再離開此頁面。",
+    // Please wait for your video to finish uploading before leaving this page.
     editButtonLabel: "編輯我的名字",
+    // Edit my name
     saveButtonLabel: "保存我的視頻回复",
+    // Save my reply
     nameScreenHeader: `
       <div class="my-6 flex flex-col items-center">
         <img src="THEME_FILE_ROOT/icon.png" class="w-16 h-16" />
@@ -70,7 +81,6 @@ export const siteData: SiteData = {
     `,
   },
   emailScreen: {
-    // values: ???
     title: "Keep in touch",
     emailInputPlaceholder: "Email address",
     buttonLabel: "Add me",
@@ -112,7 +122,7 @@ export const siteData: SiteData = {
     `,
   },
   successScreen: {
-    // values: INVITATION_DISPLAY_NAME, THEME_FILE_ROOT
+    // values: THEME_FILE_ROOT, INVITATION_DISPLAY_NAME
     markup: `
       <div class="flex flex-grow flex-col items-center justify-between">
         <div>
@@ -125,6 +135,7 @@ export const siteData: SiteData = {
         </div>
       </div>
   `,
+    // Nice work! Your video request for INVITATION_DISPLAY_NAME was sent.
   },
   warningCamera: {
     // values: HOST_APP, BUTTON_TYPE, BUTTON_ACTION, INVITATION_DISPLAY_NAME
