@@ -46,7 +46,7 @@ export const siteData: SiteData = {
         </div>
         <div class="m-8">QR_CODE</div>
         <div>
-          <p class="m-4 mb-6 text-base">將您的相機對準二維碼在您的手機上打開此邀請鏈接並向 <span class="whitespace-nowrap"><b>INVITATION_DISPLAY_NAME</b></span> <span class="whitespace-nowrap">發送視頻回复。</span></p>
+          <p class="m-4 mb-6 text-base">將您的相機對準二維碼在您的手機上打開此邀請鏈接並向 <b>INVITATION_DISPLAY_NAME</b> <span class="whitespace-nowrap">發送視頻回复。</span></p>
           <h2 class="font-heading mt-3 mb-6 text-2xl hidden">INVITATION_URL</h2>
         </div>
     </div>`,
@@ -65,7 +65,7 @@ export const siteData: SiteData = {
     // Uploading UPLOAD_PERCENTAGE%
     titleHitSave: "點擊保存按鈕",
     // Hit save to finish
-    instructions: `添加您的姓名並單擊保存按鈕將您的視頻回復發送給 <span class="whitespace-nowrap"><b>INVITATION_DISPLAY_NAME</b> 。</span>`,
+    instructions: `添加您的姓名並單擊保存按鈕將您的視頻回復發送給 <b>INVITATION_DISPLAY_NAME</b> 。`,
     // Add your name and hit Save to send INVITATION_DISPLAY_NAME your reply.
     pleaseWait:
       "請等待您的視頻上傳完成後再離開此頁面。",
@@ -126,7 +126,7 @@ export const siteData: SiteData = {
     markup: `
       <div class="flex flex-grow flex-col items-center justify-between">
         <div>
-          <p class="mt-12 mb-12 mx-3 text-center">做得好。<br/><br/>您對 <span class="whitespace-nowrap"><b>INVITATION_DISPLAY_NAME</b> 的視頻回复已發送。</span></p>
+          <p class="mt-12 mb-12 mx-3 text-center">做得好。<br/><br/>您對 <b>INVITATION_DISPLAY_NAME</b> 的視頻回复已發送。</p>
           <div class="items-center flex flex-col space-y-5">
             <a href="https://www.digitas.com/">
               <img src="THEME_FILE_ROOT/unicorn.png" width="200" height="180" />
@@ -143,13 +143,13 @@ export const siteData: SiteData = {
       <h1 class="text-center text-black font-heading font-extrabold p-0 text-2xl">Camera trouble?</h1>
       <p class="text-left text-gray-700 text-sm py-3">If you couldn't record a video, it's often because HOST_APP doesn't have camera permission.</p>
       <h1 class="text-center text-black font-heading font-extrabold p-0 text-2xl">Good news</h1>
-      <p class="text-left text-gray-700 text-sm py-3">If you don't want to give HOST_APP access to your camera, just tap the BUTTON_TYPE and BUTTON_ACTION to send a video to <span class="whitespace-nowrap"></span>INVITATION_DISPLAY_NAME</span>.</p>
+      <p class="text-left text-gray-700 text-sm py-3">If you don't want to give HOST_APP access to your camera, just tap the BUTTON_TYPE and BUTTON_ACTION to send a video to INVITATION_DISPLAY_NAME.</p>
     `,
     dismissButtonLabel: "Close this message",
   },
   warningNetwork: {
     title: "Network error",
-    description: `<p class="mb-4">Please check your connection <span class="whitespace-nowrap">and try again</span>.<p>`,
+    description: `<p class="mb-4">Please check your connection and <span class="whitespace-nowrap">try again</span>.<p>`,
     redoButtonLabel: "Try again",
   },
   warningSilent: {
