@@ -15,7 +15,7 @@ export const siteData: SiteData = {
   networkError: "Please check your Internet connection.",
   unknownError: "Unknown error.",
   introScreen: {
-    // values: SOCIAL_NETWORK, BROWSER_NAME, INVITATION_DISPLAY_NAME, EXTRA_TERMS, BRAND_SLUG, TERMS_SLUG, TERMS_NAME, BRAND_NAME
+    // values: SOCIAL_NETWORK, BROWSER_NAME, TITLE, INVITATION_DISPLAY_NAME, EXTRA_TERMS, BRAND_SLUG, TERMS_SLUG, TERMS_NAME, BRAND_NAME
     recordButtonLabel: "錄製視頻回复",
     // Record a video reply
     readyButtonLabel: "Ready to record",
