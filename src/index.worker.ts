@@ -100,7 +100,7 @@ export const siteData: SiteData = {
               <img src="/logo.png" width="220" height="32" />
             </a>
           </div>
-          <p class="mt-12 mb-4 mx-3 text-center">Make unforgettable videos<br><u>with</u> your community.</p>
+          <p class="mt-12 mb-4 mx-3 text-center"Go from idea to collecting videos in just 3 minutes.</p>
           <div class="hidden iosOnly text-center">
               <div><a class="downloadButton" href="https://apps.apple.com/us/app/clipisode-easy-video-collabs/id1475959226#?platform=iphone">Download the app</a></div>
           </div>
